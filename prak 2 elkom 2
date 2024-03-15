@@ -1,0 +1,10 @@
+import pandas as pd
+df=pd.read_csv("C:/Users/ASUS/Documents/Data2.csv")
+df
+df.describe()
+
+
+import pandas as pd
+df=pd.read_excel("C:/Users/ASUS/Documents/Data2.xlsx")
+df
+df.describe()
