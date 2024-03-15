@@ -1,0 +1,14 @@
+import pandas as pd
+df = pd.read_clipboard()
+
+
+
+rata_tinggi= df['tinggi badan'].mean()
+rata_tinggi
+
+print(df.dtypes)
+
+df['angkatan']= df['angkatan'].astype(str)
+
+
+print(df.dtypes)
