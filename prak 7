@@ -1,0 +1,18 @@
+# Memilih kolom yang diperlukan
+data_sex = data_rafael[['Name', 'Sex']]
+
+# Menghitung jumlah penumpang berdasarkan grup 'Sex'
+jumlah_penumpang_sex = data_sex['Sex'].value_counts()
+
+# Mencetak jumlah penumpang
+print('Jumlah Penumpang berdasarkan Sex:\n', jumlah_penumpang_sex)
+
+# Memilih kolom yang diperlukan
+data_survived_sex = data_rafael[['Name', 'Sex', 'Survived']]
+
+# Memfilter data penumpang yang selamat berdasarkan jenis kelamin ('Sex')
+survived_female = data_survived_sex.loc[(data_survived_sex['Survived'] == 1) & (data_survived_sex['Sex'] == 'female')]
+survived_male = data_survived_sex.loc[(data_survived_sex['Survived'] == 1) & (data_survived_sex['Sex'] == 'male')]
+
+# Mencetak jumlah penumpang yang selamat berdasarkan jenis kelamin
+print('Jumlah Penumpang Selamat berdasarkan Sex:\nFemale:', len(survived_female), '\nMale:', len(survived_male))
